@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Asthernia Games</title>
+</head>
+
+<body>
+  <div class="error">
+    <div class="alert alert-info">
+      <strong>Erreur !</strong> Veuillez passer en plein écran pour jouer !
+    </div>
+  </div>
+  <div id="jeu">
+    <canvas id="canvas" width="800" height="800"></canvas>
+  </div>
+  <div id="rightPart">
+    <label class="titre">Snake</label>
+    <button id="restartButton" class="btn info" type="button">
+      Recommencer
+    </button>
+    <label id="affScore" class="texte">Score actuel :</label>
+    <label id="affScoreMax" class="texte">Score max :</label>
+
+    <img id="vert" src="ressources/headsnake-vert.png" class="iconsSkin"
+      onclick="localStorage.setItem('couleur', 'vert');app.view.animation('vert', 'bleu','orange')">
+    <img id="bleu" src="ressources/headsnake-bleu.png" class="iconsSkin"
+      onclick="localStorage.setItem('couleur', 'bleu');app.view.animation('bleu','vert','orange')">
+    <img id="orange" src="ressources/headsnake-orange.png" class="iconsSkin"
+      onclick="localStorage.setItem('couleur', 'orange');app.view.animation('orange','vert', 'bleu')">
+    <div>
+      <button id="facile" class="smallbtn success" type="button" onclick="localStorage.setItem('difficulte', 'facile');app.view.animationButton('facile', 'normal','difficile')">
+        Facile
+      </button>
+      <button id="normal" class="smallbtn secondary" type="button" onclick="localStorage.setItem('difficulte', 'normal');app.view.animationButton('normal', 'facile','difficile')">
+        Normal
+      </button>
+      <button id="difficile" class="smallbtn danger" type="button" onclick="localStorage.setItem('difficulte', 'difficile');app.view.animationButton('difficile', 'facile','normal')">
+        Difficile
+      </button>
+    </div>
+  </div>
+</body>
+<footer>
+  <script src="Serpent.js"></script>
+  <script src="Case.js"></script>
+  <script src="Grille.js"></script>
+  <script src="Model.js"></script>
+  <script src="View.js"></script>
+  <script src="Controller.js"></script>
+</footer>
+
+</html>
