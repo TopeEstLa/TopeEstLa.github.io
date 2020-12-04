@@ -1,0 +1,202 @@
+@font-face {
+  font-family: "8bit";
+  src: url("ressources/8-BIT WONDER.TTF");
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  outline: none;
+}
+
+#jeu {
+  display: none;
+}
+
+#rightPart {
+  display: none;
+}
+
+@media (min-width: 1420px) {
+  .error {
+    display: none;
+  }
+  #jeu {
+    display: inline-block;
+  }
+  #rightPart {
+    display: inline-block;
+  }
+}
+
+.iconsSkin {
+  margin-top: 30px;
+  margin-right: 30px;
+  width: 50px;
+}
+
+#rightPart {
+  text-align: center;
+  width: 600px;
+  height: 600px;
+  background: #000;
+  vertical-align: top;
+  margin-top: 90px;
+  margin-bottom: 150px;
+}
+
+.error {
+  text-align: center;
+  width: 80%;
+  margin-left: 10%;
+  padding-top: 30%;
+  padding-bottom: 30%;
+  background: #000;
+  vertical-align: top;
+  margin-top: 90px;
+  margin-bottom: 10%;
+}
+
+#body {
+  display: inline-block;
+}
+
+.titre {
+  font-size: 50px;
+  color: white;
+  font-family: "8bit";
+}
+
+.texte {
+  text-align: left;
+  margin: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  float: left;
+  color: white;
+  font-family: "8bit";
+  width: 500px;
+}
+
+.btn {
+  margin: 50px;
+  width: 500px;
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.smallbtn {
+  margin: 10px;
+  margin-top: 50px;
+  width: 150px;
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Green */
+
+.success {
+  transition: all .3s ease-in-out;
+  border-color: #4CAF50;
+  color: green;
+}
+
+.successSelected {
+  transition: all .3s ease-in-out;
+  cursor: default;
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+  color: white;
+}
+
+/* red */
+
+.danger {
+  transition: all .3s ease-in-out;
+  border-color: #f44336;
+  color: red;
+}
+
+.dangerSelected {
+  transition: all .3s ease-in-out;
+  cursor: default;
+  background-color: #f44336;
+  color: white;
+  border-color: #f44336;
+}
+
+/* white */
+
+.secondary {
+  transition: all .3s ease-in-out;
+  border-color: white;
+  color: white;
+}
+
+.secondarySelected {
+  transition: all .3s ease-in-out;
+  cursor: default;
+  background-color: white;
+  color: black;
+;
+}
+
+/* Blue */
+
+.info {
+  border-color: #2196F3;
+  color: dodgerblue;
+  &:hover{
+    background: #2196F3;
+    color: black;
+  }
+}
+
+.alert-info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+.alert {
+  padding: 15px;
+  margin: 20px;
+  border: 1px solid transparent;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-radius: 4px;
+}
+
+body {
+  height: 1000px;
+  background: linear-gradient(150deg, rgb(48, 60, 172) 29%, rgb(36, 11, 103) 100%);
+  overflow: hidden;
+}
+
+.selected {
+  border: #fff;
+  border-style: solid;
+  border-radius: 5px;
+  transition: all .3s ease-in-out;
+}
+
+.unSelected {
+  cursor: pointer;
+  border: #000;
+  border-style: solid;
+  border-radius: 5px;
+  transition: all .3s ease-in-out;
+}

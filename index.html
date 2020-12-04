@@ -1,55 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <title>Snake Games</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="styles/ressources/favicon.png"/>
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>TopeEstLa</title>
 </head>
 
 <body>
-  <div class="error">
-    <div class="alert alert-info">
-      <strong>Erreur !</strong> Veuillez passer en plein écran pour jouer !
-    </div>
-  </div>
-  <div id="jeu">
-    <canvas id="canvas" width="800" height="800"></canvas>
-  </div>
-  <div id="rightPart">
-    <label class="titre">Snake</label>
-    <button id="restartButton" class="btn info" type="button">
-      Recommencer
-    </button>
-    <label id="affScore" class="texte">Score actuel :</label>
-    <label id="affScoreMax" class="texte">Score max :</label>
 
-    <img id="vert" src="ressources/headsnake-vert.png" class="iconsSkin"
-      onclick="localStorage.setItem('couleur', 'vert');app.view.animation('vert', 'bleu','orange')">
-    <img id="bleu" src="ressources/headsnake-bleu.png" class="iconsSkin"
-      onclick="localStorage.setItem('couleur', 'bleu');app.view.animation('bleu','vert','orange')">
-    <img id="orange" src="ressources/headsnake-orange.png" class="iconsSkin"
-      onclick="localStorage.setItem('couleur', 'orange');app.view.animation('orange','vert', 'bleu')">
-    <div>
-      <button id="facile" class="smallbtn success" type="button" onclick="localStorage.setItem('difficulte', 'facile');app.view.animationButton('facile', 'normal','difficile')">
-        Facile
-      </button>
-      <button id="normal" class="smallbtn secondary" type="button" onclick="localStorage.setItem('difficulte', 'normal');app.view.animationButton('normal', 'facile','difficile')">
-        Normal
-      </button>
-      <button id="difficile" class="smallbtn danger" type="button" onclick="localStorage.setItem('difficulte', 'difficile');app.view.animationButton('difficile', 'facile','normal')">
-        Difficile
-      </button>
+<header id="particles-js">
+
+    <script src="js/particle/particles.js"></script>
+    <script src="js/particle/app.js"></script>
+
+    <div id="header">
+        <h1>TopeEstLa</h1>
+        <p>JavaScript (NodeJs) développeur</p>
+        <button onclick="window.location.href='#about'">À Propos</button>
+        <button onclick="window.location.href='#project'">Projets</button>
+        <button onclick="window.location.href='#contact'">Contact</button>
     </div>
-  </div>
-</body>
+</header>
+
+<section id="about">
+    <div>
+        <h2>À propos de moi.</h2>
+        <p>Jeune développeur de 16 ans, je souhaiterais actuellement en faire ma profession.</p>
+        <p>Apprés avoir essayé beaucoup de langages de programmation, je me suis spécialisé dans le Javascript et plus précisément dans le NodeJs.</p>
+        <p>Mais je suis un peux touche à tous et j'apprends actuellement les langages du développement web.</p>
+        <p>Je suis donc capable de faire tous de type de de chose en NodeJs (bot-discord, etc)</p>
+    </div>
+</section>
+
+<section id="project">
+    <div>
+        <h2>Mes projets.</h2>
+        <ul>
+            <li id="project-1">
+                <a href="https://delta-corp.fr"><h4>DeltaCorp</h4></a>
+                <p>DeltaCorp est une entreprise d'édition et création de jeux vidéo.</p>
+            </li>
+            <li id="project-2">
+                <a href="https://necrozia.fr"><h4>Necrozia</h4></a>
+                <p>Necrozia est un serveur minecraft Pvp/Faction modée sur le thème de la mort, en plein développement.</p>
+            </li>
+            <li id="project-3">
+                <a href="https://tewnbot.fr"><h4>Tewnbot</h4></a>
+                <p>TewnBot est un bot discord Multi-Guild en cours de développement.</p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contacter moi.</h2>
+    <ul>
+        <li id="discord"><a href="https://discord.com"><h4>TopeEstLa#0001</h4></a></li>
+        <li id="twitter"><a href="http://twitter.topeestla.me/"><h4>@TopeEstPasLa</h4></a></li>
+        <li id="github"><a href="http://github.TopeEstLa.me"><h4>@TopeEstLa</h4></a></li>
+    </ul>
+</section>
+
 <footer>
-  <script src="Serpent.js"></script>
-  <script src="Case.js"></script>
-  <script src="Grille.js"></script>
-  <script src="Model.js"></script>
-  <script src="View.js"></script>
-  <script src="Controller.js"></script>
+    <p id="footer"></p>
+    <p><a href="snake/index.html">Snake</a></p>
+    <p>Made with ❤ by <a href="http://topeestla.me/">TopeEstLa</a></p>
 </footer>
 
+</body>
 </html>
