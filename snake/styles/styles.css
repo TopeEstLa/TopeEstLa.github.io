@@ -2,6 +2,11 @@
   font-family: "8bit";
   src: url("ressources/8-BIT WONDER.TTF");
 }
+a {
+  text-decoration: none;
+  color: white;
+}
+
 button {
   outline: none;
 }
