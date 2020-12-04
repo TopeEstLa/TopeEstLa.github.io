@@ -2,9 +2,10 @@
 <html>
 
 <head>
-  <meta charset="utf-8" />
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <title>Snake Games</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+  <link rel="shortcut icon" type="image/png" href="styles/ressources/headsnake-bleu.png"/>
+  <title>TopeEstLa - Snake</title>
 </head>
 
 <body>
@@ -19,17 +20,17 @@
   <div id="rightPart">
     <label class="titre">Snake</label>
     <button id="restartButton" class="btn info" type="button">
-      Recommencer
+      Jouer
     </button>
     <label id="affScore" class="texte">Score actuel :</label>
     <label id="affScoreMax" class="texte">Score max :</label>
 
-    <img id="vert" src="ressources/headsnake-vert.png" class="iconsSkin"
-      onclick="localStorage.setItem('couleur', 'vert');app.view.animation('vert', 'bleu','orange')">
-    <img id="bleu" src="ressources/headsnake-bleu.png" class="iconsSkin"
-      onclick="localStorage.setItem('couleur', 'bleu');app.view.animation('bleu','vert','orange')">
-    <img id="orange" src="ressources/headsnake-orange.png" class="iconsSkin"
-      onclick="localStorage.setItem('couleur', 'orange');app.view.animation('orange','vert', 'bleu')">
+    <img id="vert" src="styles/ressources/headsnake-vert.png" class="iconsSkin"
+         onclick="localStorage.setItem('couleur', 'vert');app.view.animation('vert', 'bleu','orange')">
+    <img id="bleu" src="styles/ressources/headsnake-bleu.png" class="iconsSkin"
+         onclick="localStorage.setItem('couleur', 'bleu');app.view.animation('bleu','vert','orange')">
+    <img id="orange" src="styles/ressources/headsnake-orange.png" class="iconsSkin"
+         onclick="localStorage.setItem('couleur', 'orange');app.view.animation('orange','vert', 'bleu')">
     <div>
       <button id="facile" class="smallbtn success" type="button" onclick="localStorage.setItem('difficulte', 'facile');app.view.animationButton('facile', 'normal','difficile')">
         Facile
@@ -44,12 +45,12 @@
   </div>
 </body>
 <footer>
-  <script src="Serpent.js"></script>
-  <script src="Case.js"></script>
-  <script src="Grille.js"></script>
-  <script src="Model.js"></script>
-  <script src="View.js"></script>
-  <script src="Controller.js"></script>
+  <script src="js/Serpent.js"></script>
+  <script src="js/Case.js"></script>
+  <script src="js/Grille.js"></script>
+  <script src="js/Model.js"></script>
+  <script src="js/View.js"></script>
+  <script src="js/Controller.js"></script>
 </footer>
 
 </html>

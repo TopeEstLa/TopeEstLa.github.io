@@ -25,11 +25,11 @@ class View {
       fruit.onload = () => {
         this.afficherFruit(matrice, ctx, fruit);
       }
-      teteSerp.src = 'ressources/headsnake-' + couleur + '.png';
-      corpsSerp.src = 'ressources/bodysnake-' + couleur + '.png';
-      fruit.src = 'ressources/food.png';
+      teteSerp.src = './styles/ressources/headsnake-' + couleur + '.png';
+      corpsSerp.src = './styles/ressources/bodysnake-' + couleur + '.png';
+      fruit.src = './styles/ressources/food.png';
     }
-    fond.src = 'ressources/boardgame.png';
+    fond.src = './styles/ressources/boardgame.png';
   }
 
   /**
@@ -125,13 +125,13 @@ class View {
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
     var fond = new Image();
-    fond.src = 'ressources/boardgame.png';
+    fond.src = './styles/ressources/boardgame.png';
     var teteSerp = new Image();
-    teteSerp.src = 'ressources/headsnake-' + couleur + '.png';
+    teteSerp.src = './styles/ressources/headsnake-' + couleur + '.png';
     var corpsSerp = new Image();
-    corpsSerp.src = 'ressources/bodysnake-' + couleur + '.png';
+    corpsSerp.src = './styles/ressources/bodysnake-' + couleur + '.png';
     var fruit = new Image();
-    fruit.src = 'ressources/food.png';
+    fruit.src = './styles/ressources/food.png';
     return { ctx, fond, teteSerp, corpsSerp, fruit, couleur };
   }
 
@@ -158,7 +158,7 @@ class View {
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
     var fond = new Image();
-    fond.src = 'ressources/boardgame.png';
+    fond.src = '.styles/ressources/boardgame.png';
     return { ctx, fond };
   }
 

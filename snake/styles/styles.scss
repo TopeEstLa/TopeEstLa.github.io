@@ -144,7 +144,7 @@ button {
   cursor: default;
   background-color: white;
   color: black;
-  ;
+;
 }
 
 /* Blue */
@@ -152,12 +152,10 @@ button {
 .info {
   border-color: #2196F3;
   color: dodgerblue;
-}
-
-.info:hover {
-  background: #2196F3;
-  color: black;
-  ;
+  &:hover{
+    background: #2196F3;
+    color: black;
+  }
 }
 
 .alert-info {
@@ -178,8 +176,8 @@ button {
 }
 
 body {
-  background-image: url("ressources/wall.png");
-  background-size: 30px;
+  height: 1000px;
+  background: linear-gradient(150deg, rgb(48, 60, 172) 29%, rgb(36, 11, 103) 100%);
   overflow: hidden;
 }
 
