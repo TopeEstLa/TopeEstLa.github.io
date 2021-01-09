@@ -1,10 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,80);
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  width: 50px;
   margin: 0;
   color: white;
   font-family: "Montserrat", sans-serif;
@@ -36,107 +31,114 @@ header h1 {
   text-shadow: rgba(0, 0, 0, 0.16) 9px 10px 9px;
 }
 header p {
-  font-size: 29px;
+  font-size: 40px;
   text-shadow: rgba(0, 0, 0, 0.16) 9px 10px 9px;
 }
 
-#about {
+/*#about{
   height: 85vh;
-}
-#about h2 {
-  text-align: center;
-  font-size: 70px;
-  margin: 0 auto 20px auto;
-  padding: 20px;
-  border-bottom: 1px solid #ffffff;
-  width: 700px;
-}
-#about p {
-  text-align: center;
-  font-size: 27px;
-  margin-bottom: 5px;
+  h2{
+    text-align: center;
+    font-size: 70px;
+    margin: 0 auto 20px auto;
+    padding: 20px;
+    border-bottom: 1px solid #ffffff;
+    width: 700px;
+  }
+  p{
+    text-align: center;
+    font-size: 27px;
+    margin-bottom: 5px;
+  }
 }
 
-#project {
+#project{
   height: 85vh;
-}
-#project h2 {
-  text-align: center;
-  font-size: 70px;
-  margin: 0 auto 40px auto;
-  padding: 20px;
-  border-bottom: 1px solid #ffffff;
-  width: 700px;
-}
-#project ul {
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
-  list-style: none;
-}
-#project ul li {
-  width: 300px;
-  float: left;
-  padding-top: 140px;
-  text-align: center;
-  margin-right: 10px;
-}
-#project #project-1 {
-  background: url("ressources/deltacorp.png") no-repeat top center;
-}
-#project #project-2 {
-  background: url("ressources/necrozia.png") no-repeat top center;
-}
-#project #project-3 {
-  background: url("ressources/TewnBot.PNG") no-repeat top center;
+  h2{
+    text-align: center;
+    font-size: 70px;
+    margin: 0 auto 40px auto;
+    padding: 20px;
+    border-bottom: 1px solid #ffffff;
+    width: 700px;
+  }
+  ul{
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+    list-style: none;
+    li {
+      width: 300px;
+      float: left;
+      padding-top: 140px;
+      text-align: center;
+      margin-right: 10px;
+    }
+  }
+
+  #project-1{
+    background: url("ressources/deltacorp.png") no-repeat top center;
+  }
+
+  #project-2{
+    background: url("ressources/necrozia.png") no-repeat top center;
+  }
+
+  #project-3 {
+    background: url("ressources/TewnBot.PNG") no-repeat top center;
+  }
 }
 
-#contact {
+#contact{
   margin-bottom: 300px;
-}
-#contact h2 {
-  text-align: center;
-  font-size: 70px;
-  margin: 0 auto 40px auto;
-  padding: 20px;
-  border-bottom: 1px solid #ffffff;
-  width: 700px;
-}
-#contact ul {
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
-  list-style: none;
-}
-#contact ul li {
-  width: 300px;
-  float: left;
-  padding-top: 140px;
-  text-align: center;
-  margin-right: 10px;
-}
-#contact #discord {
-  background: url("ressources/discord.png") no-repeat top center;
-}
-#contact #twitter {
-  background: url("ressources/twitter.png") no-repeat top center;
-}
-#contact #github {
-  background: url("ressources/github.PNG") no-repeat top center;
+  h2{
+    text-align: center;
+    font-size: 70px;
+    margin: 0 auto 40px auto;
+    padding: 20px;
+    border-bottom: 1px solid #ffffff;
+    width: 700px;
+  }
+  ul{
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+    list-style: none;
+    li {
+      width: 300px;
+      float: left;
+      padding-top: 140px;
+      text-align: center;
+      margin-right: 10px;
+    }
+  }
+
+  #discord{
+    background: url("ressources/discord.png") no-repeat top center;
+  }
+
+  #twitter{
+    background: url("ressources/twitter.png") no-repeat top center;
+  }
+
+  #github {
+    background: url("ressources/github.PNG") no-repeat top center;
+  }
 }
 
-footer #footer {
-  text-align: center;
-  font-size: 70px;
-  margin: 0 auto 40px auto;
-  padding: 20px;
-  border-bottom: 1px solid #ffffff;
-  width: 1110px;
-}
-footer p {
-  text-align: center;
-}
-
+footer{
+  #footer{
+    text-align: center;
+    font-size: 70px;
+    margin: 0 auto 40px auto;
+    padding: 20px;
+    border-bottom: 1px solid #ffffff;
+    width: 1110px;
+  }
+  p{
+    text-align: center;
+  }
+}*/
 button {
   background-color: #72A0C1;
   border-radius: 20px;
