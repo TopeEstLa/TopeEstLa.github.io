@@ -2,74 +2,102 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" type="image/png" href="styles/ressources/favicon.png"/>
-    <link rel="stylesheet" href="styles/styles.css">
-    <title>TopeEstLa</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="index.css"/>
+	<link rel="icon" href="favicon.png">
+	<link rel="shortcut-icon" href="favicon.png">
+	<title>TopeEstLa</title>
 </head>
 
 <body>
+	<!--<script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" integrity="sha384-9/D4ECZvKMVEJ9Bhr3ZnUAF+Ahlagp1cyPC7h5yDlZdXs4DQ/vRftzfd+2uFUuqS" crossorigin="anonymous"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+	<script src="index.js" defer></script>
 
-<header id="particles-js">
-
-    <script src="js/particle/particles.js"></script>
-    <script src="js/particle/app.js"></script>
+	<!-- Symbols -->
+	<div id="loadOverlay"></div>
+	<div id="navbar">
+        <h2 id="logo" data-text="TopeEstLa.me">TopeEstLa.me</h2>
+		<div id="menuIcon">
+			<label>
+                <input id="menuClick" type="checkbox">
+                <div class="bar">
+                    <span class="top"></span>
+                    <span class="middle"></span>
+                    <span class="bottom"></span>
+                </div>
+            </label>
+        </div>
+    </div>
+    <div class="menuContainer">
+        <div id="cWrapper">
+            <div id="contactsWrapper">
+                <a class="contact">
+                    <div class="contactLinkText">Discord</div>
+                    <div class="contactHoverOverlay"></div>
+                </a>
+                <a class="contact">
+                    <div class="contactLinkText">Twitter</div>
+                    <div class="contactHoverOverlay"></div>
+                </a>
+                <a class="contact">
+                    <div class="contactLinkText">Email</div>
+                    <div class="contactHoverOverlay"></div>
+                </a>
+            </div>
+        </div>
+        <div id="menuLine"></div>
+        <div id="menuLinks">
+            <a href="#" class="menuLink">
+                <div class="underLine"></div>
+                <h1 class="menuLinkText">Accueil</h1>
+            </a>
+            <a href="#" class="menuLink">
+                <div class="underLine"></div>
+                <h1 class="menuLinkText">À propos</h1>
+            </a>
+            <a href="#" class="menuLink">
+                <div class="underLine"></div>
+                <h1 class="menuLinkText">Projets</h1>
+            </a>
+            <a href="#" class="menuLink">
+                <div class="underLine"></div>
+                <h1 class="menuLinkText">Services</h1>
+            </a>
+            <a href="#" class="menuLink">
+                <div class="underLine"></div>
+                <h1 class="menuLinkText">Contact</h1>
+            </a>
+        </div>
+    </div>
 
     <div id="header">
-        <h1>TopeEstLa</h1>
-        <p>Maintenance en cour.</p>
-        <!--
-        <button onclick="window.location.href='#about'">À Propos</button>
-        <button onclick="window.location.href='#project'">Projets</button>
-        <button onclick="window.location.href='#contact'">Contact</button> -->
+        <div id="topRightContainer">
+            <img src="favicon.png">
+        </div>
+        <!---->
+        <div id="bottomLeftContainer">
+            <div id="bottomLeftTitle">Site en développement</div>
+            <div id="servicesLinkWrapper">
+                <a href="#" class="serviceLink" data-link="SOOON">
+                    SOOON
+                    <div class="serviceLinkOverlay"></div>
+                </a>
+                <a href="#" class="bottomLeftSeperator"></a>
+                <a href="#" class="serviceLink" data-link="SOOON">
+                    SOOON
+                    <div class="serviceLinkOverlay"></div>
+                </a>
+                <a href="#" class="bottomLeftSeperator"></a>
+                <a href="#" class="serviceLink" data-link="SOOON">
+                    SOOON
+                    <div class="serviceLinkOverlay"></div>
+                </a>
+            </div>
+        </div>
+        <!---->
     </div>
-</header>
-
-<!--
-<section id="about">
-    <div>
-        <h2>À propos de moi.</h2>
-        <p>Jeune développeur de 16 ans, je souhaiterais actuellement en faire ma profession.</p>
-        <p>Apprés avoir essayé beaucoup de langages de programmation, je me suis spécialisé dans le Javascript et plus précisément dans le NodeJs.</p>
-        <p>Mais je suis un peux touche à tous et j'apprends actuellement les langages du développement web.</p>
-        <p>Je suis donc capable de faire tous de type de de chose en NodeJs (bot-discord, etc)</p>
-    </div>
-</section>
-
-<section id="project">
-    <div>
-        <h2>Mes projets.</h2>
-        <ul>
-            <li id="project-1">
-                <a href="https://delta-corp.fr"><h4>DeltaCorp</h4></a>
-                <p>DeltaCorp est une entreprise d'édition et création de jeux vidéo.</p>
-            </li>
-            <li id="project-2">
-                <a href="https://necrozia.fr"><h4>Necrozia</h4></a>
-                <p>Necrozia est un serveur minecraft Pvp/Faction modée sur le thème de la mort, en plein développement.</p>
-            </li>
-            <li id="project-3">
-                <a href="https://tewnbot.fr"><h4>Tewnbot</h4></a>
-                <p>TewnBot est un bot discord Multi-Guild en cours de développement.</p>
-            </li>
-        </ul>
-    </div>
-</section>
-
-<section id="contact">
-    <h2>Contacter moi.</h2>
-    <ul>
-        <li id="discord"><a href="https://discord.com"><h4>TopeEstLa#0001</h4></a></li>
-        <li id="twitter"><a href="http://twitter.topeestla.me/"><h4>@TopeEstPasLa</h4></a></li>
-        <li id="github"><a href="http://github.TopeEstLa.me"><h4>@TopeEstLa</h4></a></li>
-    </ul>
-</section>
-
-<footer>
-    <p id="footer"></p>
-    <p><a href="snake/index.html">Snake</a></p>
-    <p>Made with ❤ by <a href="http://topeestla.me/">TopeEstLa</a></p>
-</footer> -->
-
+    <!---->
 </body>
 </html>
