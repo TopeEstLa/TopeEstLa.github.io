@@ -11,13 +11,14 @@ class Serpent {
     }
 
 
-    getTete() {
+    getHead() {
         return this.positions[this.positions.length - 1];
     }
 
 
-    avancer() {
-        let tete = this.getTete();
+    move() {
+        let tete = this.getHead();
+
         switch (this.direction) {
             case "est":
                 this.positions.push(
@@ -41,28 +42,29 @@ class Serpent {
     }
 
     /**
-     * @param {*} nouvelleDirection
+     *
+     * @param newDirection
      */
-    changerDirection(nouvelleDirection) {
-        switch (nouvelleDirection) {
+    changeDirection(newDirection) {
+        switch (newDirection) {
             case "est":
-                if (this.previousdirection != "ouest") {
-                    this.direction = nouvelleDirection;
+                if (this.previousdirection !== "ouest") {
+                    this.direction = newDirection;
                 }
                 break;
             case "sud":
-                if (this.previousdirection != "nord") {
-                    this.direction = nouvelleDirection;
+                if (this.previousdirection !== "nord") {
+                    this.direction = newDirection;
                 }
                 break;
             case "nord":
-                if (this.previousdirection != "sud") {
-                    this.direction = nouvelleDirection;
+                if (this.previousdirection !== "sud") {
+                    this.direction = newDirection;
                 }
                 break;
             case "ouest":
-                if (this.previousdirection != "est") {
-                    this.direction = nouvelleDirection;
+                if (this.previousdirection !== "est") {
+                    this.direction = newDirection;
                 }
                 break;
             default:
@@ -71,45 +73,49 @@ class Serpent {
     }
 
     seMordQueue() {
-        let tete = this.getTete();
+        let head = this.getHead();
         let count = 0
-        for (let i = 0; i < this.positions.length; i++) { 
+        for (let i = 0; i < this.positions.length; i++) {
             const element = this.positions[i];
-            if (element.superpose(tete)) {
+            if (element.superpose(head)) {
                 count++;
             }
         }
-        return count > 1; 
+        return count > 1;
     }
 
 
-    avancerQueue() {
+    moveQueue() {
         this.positions.shift();
     }
 
 
-    manger() {
+    eat() {
         this.size++;
     }
 
     /**
-     * @param {*} c
+     *
+     * @param c
+     * @returns {boolean}
      */
-    faisPartiDuSerpent(c) {
+    isSnake(c) {
         let count = 0
-        for (let i = 0; i < this.positions.length; i++) { 
+        for (let i = 0; i < this.positions.length; i++) {
             const element = this.positions[i];
             if (element.superpose(c)) {
                 count++;
             }
         }
-        return count > 0; 
+        return count > 0;
     }
 
     /**
-     * @param {*} c
+     *
+     * @param c
+     * @returns {boolean}
      */
-    estLaTete(c) {
-        return c.superpose(this.getTete());
+    isHead(c) {
+        return c.superpose(this.getHead());
     }
 }

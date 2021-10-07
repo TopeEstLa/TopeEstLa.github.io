@@ -1,5 +1,9 @@
 class Case {
 
+    /**
+     * @param posX
+     * @param posY
+     */
     constructor(posX, posY) {
         this.posX = posX;
         this.posY = posY;
@@ -10,13 +14,14 @@ class Case {
      */
     superpose(case2) {
         let case1 = this;
-        var aProps = Object.getOwnPropertyNames(case1);
-        var bProps = Object.getOwnPropertyNames(case2);
-        if (aProps.length != bProps.length) {
+        const aProps = Object.getOwnPropertyNames(case1);
+        const bProps = Object.getOwnPropertyNames(case2);
+
+        if (aProps.length !== bProps.length) {
             return false;
         }
-        for (var i = 0; i < aProps.length; i++) {
-            var propName = aProps[i];
+        for (let i = 0; i < aProps.length; i++) {
+            const propName = aProps[i];
             if (case1[propName] !== case2[propName]) {
                 return false;
             }

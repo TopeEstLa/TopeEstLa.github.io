@@ -2,140 +2,58 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>TopeEstLa.me</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
-    <link rel="stylesheet" href="assets/bootstrap/css/style.css">
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="shortcut icon" type="image/png" href="styles/ressources/headsnake-bleu.png"/>
+    <title>TopeEstLa - Snake</title>
 </head>
 
-<body id="page-top">
-<nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
-    <div class="container">
-        <button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right"
-                type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i
-                class="fa fa-align-justify"></i></button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">à propos<br></a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">services</a></li>
-                <li class="nav-item"></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">contact</a></li>
-            </ul>
-        </div>
+<body>
+<div class="error">
+    <div class="alert alert-info">
+        <strong>Erreur !</strong> Veuillez passer en plein écran pour jouer !
     </div>
-</nav>
-<header class="text-center text-white d-flex masthead" style=" background-image:url('assets/img/header.jpg');">
-    <div class="container my-auto">
-        <div class="row">
-            <div class="col-lg-10 mx-auto">
-                <h1><strong
-                        style="filter: blur(0px) brightness(190%) saturate(100%);padding: -3px;">TopeEstLa.me</strong>
-                </h1>
-                <hr>
-            </div>
-        </div>
-        <div class="col-lg-8 mx-auto">
-            <p class="text-faded mb-5" style="font-size: 40px;font-family: Merriweather, serif;">Développeur JAVA, JAVASCRIPT<br>
-            </p><a class="btn btn-primary btn-xl js-scroll-trigger" role="button" href="#services">VOIR PLUS</a>
-        </div>
-    </div>
-</header>
-<section class="bg-primary" id="about">
-    <div class="container">
-        <div class="row">
-            <div class="col offset-lg-7 text-center mx-auto">
-                <h2 class="text-white section-heading">À PROPOS</h2>
-                <hr class="light my-4">
-                <p class="text-faded mb-4">Antonin / TopeEstLa développeur Java & JavaScript <br> <br> <br> </p>
+</div>
+<div id="jeu">
+    <canvas id="canvas" width="800" height="800"></canvas>
+</div>
+<div id="rightPart">
+    <label class="titre">Snake</label>
+    <button id="restartButton" class="btn info" type="button">
+        Jouer
+    </button>
+    <label id="affScore" class="texte">Score actuel :</label>
+    <label id="affScoreMax" class="texte">Score max :</label>
 
-                <h2 class="text-white section-heading">J'UTILISE</h2>
-                <hr class="light my-4">
-                <div class="nav-center">
-                    <a class="nav-item">
-                        <span class="icon"> <i class="fab fa-js fa-4x"></i></span>
-                    </a>
-                    <a class="nav-item">
-                        <span class="icon"> <i class="fab fa-java fa-4x"></i></span>
-                    </a>
-                    <a class="nav-item">
-                        <span class="icon"> <i class="fab fa-linux fa-4x"></i></span>
-                    </a>
-
-                </div>
-            </div>
-        </div>
+    <img id="vert" src="styles/ressources/headsnake-vert.png" class="iconsSkin"
+         onclick="localStorage.setItem('couleur', 'vert');app.view.animation('vert', 'bleu','orange')">
+    <img id="bleu" src="styles/ressources/headsnake-bleu.png" class="iconsSkin"
+         onclick="localStorage.setItem('couleur', 'bleu');app.view.animation('bleu','vert','orange')">
+    <img id="orange" src="styles/ressources/headsnake-orange.png" class="iconsSkin"
+         onclick="localStorage.setItem('couleur', 'orange');app.view.animation('orange','vert', 'bleu')">
+    <div>
+        <button id="facile" class="smallbtn success" type="button"
+                onclick="localStorage.setItem('difficulte', 'facile');app.view.animationButton('facile', 'normal','difficile')">
+            Facile
+        </button>
+        <button id="normal" class="smallbtn secondary" type="button"
+                onclick="localStorage.setItem('difficulte', 'normal');app.view.animationButton('normal', 'facile','difficile')">
+            Normal
+        </button>
+        <button id="difficile" class="smallbtn danger" type="button"
+                onclick="localStorage.setItem('difficulte', 'difficile');app.view.animationButton('difficile', 'facile','normal')">
+            Difficile
+        </button>
     </div>
-</section>
-<section id="services">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Mes services</h2>
-                <hr class="my-4">
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-lg-3 text-center">
-                <div class="mx-auto service-box mt-5"><i class="fa fa-bolt fa-4x text-primary mb-3 sr-icons"
-                                                         data-aos="zoom-in" data-aos-duration="200"
-                                                         data-aos-once="true"></i>
-                    <h3 class="mb-3">Plugins spigot</h3>
-                    <p class="text-muted mb-0">Je réalise différents plugins pour vos serveurs Minecraft <br> en fonction
-                        du cahier des charge</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="portfolio" class="p-0"></section>
-<section id="contact" style="color: rgb(18,19,20);background: #212529;">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 text-center mx-auto">
-                <h2 class="section-heading" style="color: rgb(255,255,255);">Contactez-moi</h2>
-                <hr class="my-4">
-                <p class="mb-5" style="color: rgb(255,255,255);">Intéressé(e) par l'un de mes services ?
-                    Contactez-moi.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 text-center ml-auto"><i class="fa fa-address-book fa-3x mb-3 sr-contact"
-                                                         data-aos="zoom-in" data-aos-duration="300"
-                                                         data-aos-once="true"
-                                                         style="color: rgb(255,255,255);"></i>
-                <p style="color: rgb(240,95,64);">Antony Érable#0001</p>
-            </div>
-            <div class="col-lg-4 text-center ml-auto"><i class="fa fa-github fa-3x mb-3 sr-contact"
-                                                         data-aos="zoom-in" data-aos-duration="300"
-                                                         data-aos-once="true"
-                                                         style="color: rgb(255,255,255);"></i>
-                <p style="color: rgb(240,95,64);">TopeEstLa</p>
-            </div>
-            <div class="col-lg-4 text-center ml-auto"><i class="fa fa-twitter fa-3x mb-3 sr-contact"
-                                                         data-aos="zoom-in" data-aos-duration="300"
-                                                         data-aos-once="true"
-                                                         style="color: rgb(255,255,255);"></i>
-                <p style="color: rgb(240,95,64);">@TopeEstPasLa</p>
-            </div>
-        </div>
-    </div>
-</section>
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/js/bs-init.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-<script src="assets/js/creative.js"></script>
+</div>
 </body>
-
+<footer>
+    <script src="js/Serpent.js"></script>
+    <script src="js/Case.js"></script>
+    <script src="js/Grille.js"></script>
+    <script src="js/Model.js"></script>
+    <script src="js/View.js"></script>
+    <script src="js/Controller.js"></script>
+</footer>
 
 </html>
